@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-cipc"
+version = "2025.0.1"
+dynamic = ["dependencies"]
+requires-python = ">= 3.12"
+description = "A git 'clone' made in python to later be ported to C. It's made 100% independently and should no copy how git works. But only try to do the same in a different way. The project is made for educational purpose only."
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+{name = "Bertram Aakjær", email = "work.aakjaer@gmail.com"},
+]
+license = {file = "LICENSE"}
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.scripts]
+git-cipc = "git_cipc.__main__:main"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+
+
+[project.urls]
+Homepage = "https://aakjaer.site"
