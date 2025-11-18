@@ -10,8 +10,8 @@ import git_cipc.rebuild_project as rebuild_proj
 parser = argparse.ArgumentParser(prog="git-cipc", description="Git like project for version control")
 parser.add_argument('-i', '--init', action='store_true', help="Init a project")
 parser.add_argument('-c', '--commit', action='store_true', help="Commit new changes")
-parser.add_argument('-r', '--remove', action="store_true", help="Removes the found project in folder")
-parser.add_argument('-R', '--rebuild', action="store_true", help="Rebuilds the entire project from the version control code")
+parser.add_argument('-R', '--remove', action="store_true", help="Removes the found project in folder")
+parser.add_argument('-r', '--rebuild', action="store_true", help="Rebuilds the entire project from the version control code")
 
 
 class CIPC_Project:

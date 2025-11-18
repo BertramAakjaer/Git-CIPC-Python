@@ -39,7 +39,7 @@ def populate_header(cipc):
     try:
         dest_path = os.path.join(cipc.git_cipc_path, "header")
         with open(dest_path, "w", encoding="utf-8") as f:
-            f.write("[Build:Order]\n")
+            f.write("[BUILD:ORDER]\n")
             f.write("origin\n")
         
         return True

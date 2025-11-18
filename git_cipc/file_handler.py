@@ -32,3 +32,18 @@ def get_files_to_store(curr_path):
             list.append(os.path.join(path, f))
     
     return list
+
+
+def write_file_contents(filepath, contents):
+    # Define the full file path
+    full_file_path = "data_files/logs/daily_log.csv"
+
+    # 1. Extract the directory part of the path
+    directory = os.path.dirname(full_file_path)
+
+    # 2. Create the directories if they don't exist
+    #   - exist_ok=True: Prevents an error if the directory already exists.
+    if directory: # Check if the directory variable is not empty
+        os.makedirs(directory, exist_ok=True)
+        
+    
